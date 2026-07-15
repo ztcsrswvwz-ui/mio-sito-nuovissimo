@@ -760,7 +760,7 @@ Galloway roma · HTML
     <p>Dagli stuzzichini agli hamburger, fino ai dolci della casa.</p>
   </div>
   <div class="menu-actions">
-    <button id="openMenuPdf" class="btn btn-outline">Visualizza menu completo</button>
+    <a href="menu.pdf" id="openMenuPdf" class="btn btn-outline" target="_blank" rel="noopener">Visualizza menu completo</a>
     <a href="#birre" class="btn btn-outline">Vai alle birre</a>
   </div>
   <div class="menu-grid">
@@ -959,12 +959,7 @@ Galloway roma · HTML
   const mobileMenuClose = document.querySelector('.mobile-menu-close');
   const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : null;
 
-  if (openMenuPdf && pdfOverlay) {
-    openMenuPdf.addEventListener('click', function() {
-      pdfOverlay.classList.add('open');
-      document.body.classList.add('modal-open');
-    });
-  }
+  
 
   if (pdfClose && pdfOverlay) {
     pdfClose.addEventListener('click', function() {
